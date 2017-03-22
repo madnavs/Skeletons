@@ -25,7 +25,7 @@ compute_image_mean test_image_lmdb/ test_image_mean.binaryproto
 screen -d -m ./visualize_log.sh
 caffe train -solver solver.prototxt -weights $MODEL  2>&1 | tee log/caffe_train_print.txt 
 
-extract_features trained_models/alexnet.caffemodel test.prototxt output_3 test_features_output 10 lmdb GPU DEVICE_ID=0
+extract_features $MODEL test.prototxt output_3 test_features_output 10 lmdb GPU DEVICE_ID=0
 
 python aggregate_lmdb.py List/test_list.txt test_features_output test.csv
 
