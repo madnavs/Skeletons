@@ -33,13 +33,13 @@ layer {
   transform_param {
     mirror: false
     crop_size: 227
-    mean_file: "val_image_mean.binaryproto"
+    mean_file: "train_image_mean.binaryproto"
    }
 
     data_param {
     source: "val_image_lmdb"
     backend : LMDB      
-    batch_size: 128 
+    batch_size: 64 
     }
 }
 layer {

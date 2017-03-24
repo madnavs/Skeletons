@@ -11,7 +11,7 @@ layer {
   transform_param {
     mirror: false
     crop_size: 227
-    mean_file: "test_image_mean.binaryproto"
+    mean_file: "train_image_mean.binaryproto"
    }
 
     data_param {
